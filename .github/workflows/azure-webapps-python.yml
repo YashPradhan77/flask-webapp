@@ -77,7 +77,7 @@ jobs:
       - name: Login to Azure using Managed Identity
         uses: azure/login@v2
         with:
-          auth-type: 'managed-identity'  # Use the correct auth-type for Managed Identity
+          auth-type: 'identity'  # Use the correct auth-type for Managed Identity
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID }}
 
       - name: 'Deploy to Azure Web App'
